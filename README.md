@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://glycoverse.org.cn/images/logos/glycoverse.png" alt="Glycoverse logo" width="148">
+<img src="assets/glycoverse-skill.png" alt="Glycoverse skill logo" width="360">
 
 # Glycoverse Agent Skill
 

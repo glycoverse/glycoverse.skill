@@ -1,4 +1,6 @@
 interface:
   display_name: "Glycoverse"
   short_description: "Build glycomics workflows with Glycoverse"
+  icon_small: "./assets/glycoverse-skill.png"
+  icon_large: "./assets/glycoverse-skill.png"
   default_prompt: "Use $glycoverse to select the right Glycoverse packages and find authoritative help for this task."
