@@ -53,6 +53,17 @@ accepted input classes, return types, and examples. State clearly when a package
 is unavailable and the answer relies on online documentation instead of a local
 verification.
 
+## Respect package boundaries
+
+Use only documented, exported Glycoverse interfaces. Do not call internal
+helpers with `:::` or reach into unexported objects, even as a workaround.
+Trust the package's public API and its documented contracts.
+
+If verified use of a public interface exposes a package bug, capture a minimal
+reprex and create an issue in the corresponding package repository. Include the
+public call, exact error or incorrect result, package version, and
+`sessionInfo()`. Do not replace the report with an internal-helper workaround.
+
 ## Install only when requested
 
 Do not change the user's R library merely to answer a question. If installation
