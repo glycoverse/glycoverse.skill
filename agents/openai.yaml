@@ -1,0 +1,4 @@
+interface:
+  display_name: "Glycoverse"
+  short_description: "Build glycomics workflows with Glycoverse"
+  default_prompt: "Use $glycoverse to select the right Glycoverse packages and find authoritative help for this task."
