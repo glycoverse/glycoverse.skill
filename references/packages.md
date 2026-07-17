@@ -1,9 +1,9 @@
 # Glycoverse package map
 
-Use this file only to identify likely packages. These descriptions deliberately
-stay broad because package APIs, workflows, and feature sets change. After
-choosing a package, follow [help-resources.md](help-resources.md) to discover its
-current documentation.
+Use this file to identify likely packages. For task-to-function mappings, read
+[functionality-catalog.md](functionality-catalog.md). After choosing candidate
+functions, follow [help-resources.md](help-resources.md) to verify their current
+documentation.
 
 ## Entry points
 
@@ -49,4 +49,6 @@ current documentation.
   than choosing from package names alone.
 - Inspect current `DESCRIPTION` files to learn dependencies and scope.
 - Confirm cross-package workflows in current articles or case studies.
+- Search the functionality catalog and current exports before concluding that a
+  requested analysis needs custom code.
 - Never invent a function from the basic descriptions in this file.

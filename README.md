@@ -25,6 +25,8 @@ This skill gives an agent the context it needs to navigate Glycoverse without
 stuffing every package manual into its prompt:
 
 - the broad responsibility of every Glycoverse package;
+- concrete task-to-function mappings for every package, so existing analyses
+  are discovered before custom code is written;
 - how to find installed R help, pkgdown references, vignettes, source code,
   examples, changelogs, and issue trackers;
 - how to verify functions and arguments against the live API before proposing
@@ -91,8 +93,10 @@ Use $glycoverse to review this script for invented or outdated API calls.
 | Specialized | `glydb`, `glyanno`, `glyenzy`, `glyfun` | Database access, annotation, biosynthesis, and enrichment |
 
 The stable package-routing map lives in
-[`references/packages.md`](references/packages.md). It deliberately contains no
-function-level documentation. The current-help discovery workflow lives in
+[`references/packages.md`](references/packages.md). The task-oriented function
+index lives in
+[`references/functionality-catalog.md`](references/functionality-catalog.md),
+and the current-help discovery workflow lives in
 [`references/help-resources.md`](references/help-resources.md).
 
 ## Repository layout
@@ -102,14 +106,17 @@ function-level documentation. The current-help discovery workflow lives in
 ├── SKILL.md                     # Agent workflow and routing instructions
 ├── agents/openai.yaml           # Optional Codex-facing UI metadata
 └── references/
-    ├── packages.md              # Package catalog and selection guide
-    └── help-resources.md        # Authoritative documentation workflow
+    ├── functionality-catalog.md # Task-to-function discovery index
+    ├── help-resources.md        # Authoritative documentation workflow
+    └── packages.md              # Package catalog and selection guide
 ```
 
 ## Design principles
 
-- **Fresh by design:** discover current documentation instead of bundling API
-  details that will age.
+- **Capability-aware:** search a concrete function index before rebuilding an
+  analysis from generic components.
+- **Fresh by design:** verify catalog candidates against current documentation
+  instead of assuming signatures remain unchanged.
 - **Source-aware:** prefer checked-out source and version-matched installed help.
 - **Progressive:** load detailed references only when the task needs them.
 - **Composable:** choose the smallest set of packages that solves the task.

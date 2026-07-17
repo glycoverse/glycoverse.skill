@@ -1,26 +1,37 @@
 ---
 name: glycoverse
-description: Use the Glycoverse R ecosystem for glycomics, glycoproteomics, and glycan-structure analysis. Apply when selecting Glycoverse packages, designing or implementing analysis workflows, importing or cleaning glyco-omics data, working with experiment containers, running statistics or visualization, parsing or drawing glycans, analyzing motifs, traits, annotations, databases, biosynthesis, or enrichment, troubleshooting Glycoverse code, or finding current package documentation and help.
+description: Use the Glycoverse R ecosystem for glycomics, glycoproteomics, and glycan-structure analysis. Apply when discovering whether an existing Glycoverse function provides a requested analysis, selecting packages, designing or implementing workflows, importing or cleaning glyco-omics data, working with experiment containers, running statistics or visualization, parsing or drawing glycans, analyzing motifs, traits, annotations, databases, biosynthesis, or enrichment, troubleshooting Glycoverse code, or finding current package documentation and help.
 ---
 
 # Use Glycoverse
 
-Do not treat this skill as Glycoverse API documentation. Glycoverse changes
-frequently. Use this skill to identify likely packages and then discover the
-current, version-matched documentation before producing code.
+Use this skill first as a capability index: determine whether Glycoverse already
+provides the requested analysis before designing a custom implementation.
+Glycoverse changes frequently, so treat listed functions as discovery candidates
+and verify them against current, version-matched documentation before coding.
 
 ## Start with the task, not a package guess
 
 1. Identify whether the task concerns quantitative omics data, glycan
    structures, or both.
-2. Read [references/packages.md](references/packages.md) only as a broad package
-   map. Do not derive function names or behavior from it.
-3. Follow [references/help-resources.md](references/help-resources.md) to perform
+2. Read [references/functionality-catalog.md](references/functionality-catalog.md)
+   and search for the user's analytical intent, relevant nouns, and likely
+   method names. Use its functions as candidates rather than reimplementing the
+   analysis with generic R code.
+3. Read [references/packages.md](references/packages.md) when package ownership
+   or the broader workflow is unclear.
+4. Follow [references/help-resources.md](references/help-resources.md) to perform
    a fresh documentation pass for the package versions in scope.
-4. Preserve the container and representation used by the user's existing code
+5. Preserve the container and representation used by the user's existing code
    unless current documentation requires a conversion.
-5. Verify every proposed function, important argument, input class, and return
+6. Verify every proposed function, important argument, input class, and return
    value against the discovered sources before writing or changing code.
+
+Do not start by writing a custom statistical test, parser, transformation,
+annotation routine, motif algorithm, plot, or enrichment workflow. First search
+the catalog and current package exports for an existing public Glycoverse
+function. Implement custom logic only when verified public APIs do not cover the
+requirement or when the user explicitly requests a custom implementation.
 
 ## Compose workflows
 
