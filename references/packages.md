@@ -5,12 +5,11 @@ Use this file to identify likely packages. For task-to-function mappings, read
 functions, follow [help-resources.md](help-resources.md) to verify their current
 documentation.
 
-## Entry points
+## Ecosystem management
 
 | Package | Basic description | Start here |
 |---|---|---|
 | `glycoverse` | Meta-package for installing, loading, and managing the ecosystem. | <https://glycoverse.github.io/glycoverse/> |
-| `glysmith` | High-level, integrated glyco-omics analysis workflows. | <https://glycoverse.github.io/glysmith/> |
 
 ## Omics data analysis
 

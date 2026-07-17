@@ -87,7 +87,7 @@ Use $glycoverse to review this script for invented or outdated API calls.
 
 | Area | Packages | Purpose |
 |---|---|---|
-| Entry points | `glycoverse`, `glysmith` | Install/load the ecosystem or run high-level pipelines |
+| Ecosystem | `glycoverse` | Install, load, and manage the ecosystem |
 | Omics | `glyexp`, `glyread`, `glyclean`, `glystats`, `glyvis` | Move from experimental data to analysis and communication |
 | Structures | `glyrepr`, `glyparse`, `glymotif`, `glydet`, `glydraw` | Represent, parse, inspect, quantify, and draw glycans |
 | Specialized | `glydb`, `glyanno`, `glyenzy`, `glyfun` | Database access, annotation, biosynthesis, and enrichment |

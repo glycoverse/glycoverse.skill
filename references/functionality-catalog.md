@@ -9,7 +9,7 @@ verify current arguments, input classes, return values, and deprecations.
 
 ## Package index
 
-- [Entry points](#entry-points): `glycoverse`, `glysmith`
+- [Ecosystem management](#ecosystem-management): `glycoverse`
 - [Quantitative glyco-omics](#quantitative-glyco-omics): `glyexp`, `glyread`,
   `glyclean`, `glystats`, `glyvis`
 - [Glycan structures and derived biology](#glycan-structures-and-derived-biology):
@@ -21,7 +21,6 @@ verify current arguments, input classes, return values, and deprecations.
 
 | Need | Start with |
 |---|---|
-| Run a configurable end-to-end analysis and report | `glysmith::forge_analysis()`, `glysmith::blueprint()` |
 | Create or manipulate an experiment container | `glyexp::GlycomicSE()`, `glyexp::GlycoproteomicSE()`, `glyexp::*_col()`, `glyexp::*_row()` |
 | Import search-engine or quantification output | the matching `glyread::read_*()` function |
 | Clean, normalize, impute, filter, batch-correct, or QC data | `glyclean` |
@@ -38,7 +37,7 @@ verify current arguments, input classes, return values, and deprecations.
 | Run protein- or glycan-centric functional enrichment | `glyfun` |
 | Install, update, or diagnose the ecosystem | `glycoverse` |
 
-## Entry points
+## Ecosystem management
 
 ### `glycoverse`: ecosystem management
 
@@ -47,27 +46,6 @@ verify current arguments, input classes, return values, and deprecations.
 - Diagnose installed versions and environment state with `glycoverse_sitrep()`.
 - Update Glycoverse packages with `glycoverse_update()`.
 - Inspect package conflicts with `glycoverse_conflicts()`.
-
-### `glysmith`: high-level analysis pipelines
-
-- Define, read, write, inspect, and modify analysis blueprints with
-  `blueprint()`, `blueprint_default()`, `read_blueprint()`,
-  `write_blueprint()`, `inquire_blueprint()`, and `modify_blueprint()`.
-- Run a full blueprint with `forge_analysis()`, extract or save results with
-  `cast_exp()`, `cast_data()`, `cast_plot()`, `cast_table()`, and
-  `quench_result()`, and render an HTML report with `polish_report()`.
-- Reuse pipeline steps for preprocessing, protein adjustment, group subsetting,
-  structure inference, derived traits, branch/dynamic motif quantification,
-  identification summaries, and QC through the corresponding `step_*()`
-  functions.
-- Run differential analysis through `step_dea_limma()`, `step_dea_ttest()`,
-  `step_dea_anova()`, `step_dea_wilcox()`, or `step_dea_kruskal()`; other
-  analysis steps include `step_correlation()`, `step_cox()`, `step_pca()`,
-  `step_plsda()`, `step_oplsda()`, `step_tsne()`, `step_umap()`, and
-  `step_roc()`.
-- Produce heatmaps, volcano plots, significant-variable boxplots, logos, and
-  functional-enrichment results through `step_heatmap()`, `step_volcano()`,
-  `step_sig_boxplot()`, `step_logo()`, and the `step_sig_enrich_*()` family.
 
 ## Quantitative glyco-omics
 
