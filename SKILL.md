@@ -7,6 +7,13 @@ description: Use the Glycoverse R ecosystem for glycomics, glycoproteomics, and 
 
 Use this skill first as a capability index: determine whether Glycoverse already
 provides the requested analysis before designing a custom implementation.
+
+Before reinventing a wheel, investigate whether Glycoverse already provides the
+functionality. Search the functionality catalog, relevant package exports, and
+current package documentation, then reuse and compose the verified public API
+when it covers the requirement. Do not propose new code merely because a
+familiar generic R solution is available; custom code needs an explicit reason
+after this investigation.
 Glycoverse changes frequently, so treat listed functions as discovery candidates
 and verify them against current, version-matched documentation before coding.
 
@@ -31,7 +38,8 @@ Do not start by writing a custom statistical test, parser, transformation,
 annotation routine, motif algorithm, plot, or enrichment workflow. First search
 the catalog and current package exports for an existing public Glycoverse
 function. Implement custom logic only when verified public APIs do not cover the
-requirement or when the user explicitly requests a custom implementation.
+requirement or when the user explicitly requests a custom implementation, and
+state what you searched and why the existing functionality was insufficient.
 
 ## Compose workflows
 
